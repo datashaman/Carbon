@@ -267,7 +267,7 @@ foreach ($tags as $tag) {
                     $autoDocLines[] = [
                         '@method',
                         'self',
-                        'add'.ucFirst($plUnit).'(int $value = 1)',
+                        'add'.ucFirst($plUnit).'(int|float $value = 1)',
                         "Add $plUnitName (the \$value count passed in) to the instance (using date interval).",
                     ];
                     $autoDocLines[] = [
@@ -279,7 +279,7 @@ foreach ($tags as $tag) {
                     $autoDocLines[] = [
                         '@method',
                         'self',
-                        'sub'.ucFirst($plUnit).'(int $value = 1)',
+                        'sub'.ucFirst($plUnit).'(int|float $value = 1)',
                         "Sub $plUnitName (the \$value count passed in) to the instance (using date interval).",
                     ];
                     $autoDocLines[] = [
@@ -300,7 +300,7 @@ foreach ($tags as $tag) {
                         $autoDocLines[] = [
                             '@method',
                             'self',
-                            'add'.ucFirst($plUnit).'WithOverflow(int $value = 1)',
+                            'add'.ucFirst($plUnit).'WithOverflow(int|float $value = 1)',
                             "Add $plUnitName (the \$value count passed in) to the instance (using date interval) with overflow explicitly allowed.",
                         ];
                         $autoDocLines[] = [
@@ -312,7 +312,7 @@ foreach ($tags as $tag) {
                         $autoDocLines[] = [
                             '@method',
                             'self',
-                            'sub'.ucFirst($plUnit).'WithOverflow(int $value = 1)',
+                            'sub'.ucFirst($plUnit).'WithOverflow(int|float $value = 1)',
                             "Sub $plUnitName (the \$value count passed in) to the instance (using date interval) with overflow explicitly allowed.",
                         ];
                         $autoDocLines[] = [
@@ -326,7 +326,7 @@ foreach ($tags as $tag) {
                             $autoDocLines[] = [
                                 '@method',
                                 'self',
-                                'add'.ucFirst($plUnit)."$alias(int \$value = 1)",
+                                'add'.ucFirst($plUnit)."$alias(int|float \$value = 1)",
                                 "Add $plUnitName (the \$value count passed in) to the instance (using date interval) with overflow explicitly forbidden.",
                             ];
                             $autoDocLines[] = [
@@ -338,7 +338,7 @@ foreach ($tags as $tag) {
                             $autoDocLines[] = [
                                 '@method',
                                 'self',
-                                'sub'.ucFirst($plUnit)."$alias(int \$value = 1)",
+                                'sub'.ucFirst($plUnit)."$alias(int|float \$value = 1)",
                                 "Sub $plUnitName (the \$value count passed in) to the instance (using date interval) with overflow explicitly forbidden.",
                             ];
                             $autoDocLines[] = [
@@ -362,7 +362,7 @@ foreach ($tags as $tag) {
                     $autoDocLines[] = [
                         '@method',
                         'self',
-                        'addReal'.ucFirst($plUnit).'(int $value = 1)',
+                        'addReal'.ucFirst($plUnit).'(int|float $value = 1)',
                         "Add $plUnitName (the \$value count passed in) to the instance (using timestamp).",
                     ];
                     $autoDocLines[] = [
@@ -374,7 +374,7 @@ foreach ($tags as $tag) {
                     $autoDocLines[] = [
                         '@method',
                         'self',
-                        'subReal'.ucFirst($plUnit).'(int $value = 1)',
+                        'subReal'.ucFirst($plUnit).'(int|float $value = 1)',
                         "Sub $plUnitName (the \$value count passed in) to the instance (using timestamp).",
                     ];
                     $autoDocLines[] = [
@@ -386,7 +386,7 @@ foreach ($tags as $tag) {
                     $autoDocLines[] = [
                         '@method',
                         'CarbonPeriod',
-                        $plUnit.'Until($endDate = null, int $factor = 1)',
+                        $plUnit.'Until($endDate = null, int|float $factor = 1)',
                         "Return an iterable period from current date to given end (string, DateTime or Carbon instance) for each $unitName or every X $plUnitName if a factor is given.",
                     ];
 
